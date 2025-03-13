@@ -1,9 +1,9 @@
 pipeline {
     agent any
-    stages 
+    stages {
         stage('Build') {
             steps {
-                sh 'g++ -o hello_exec main/hello.cpp'
+                sh 'g++ -o hello_exec main/nonexistent_file.cpp'  // Intentional error: nonexistent_file.cpp doesn't exist
             }
         }
         stage('Test') {
