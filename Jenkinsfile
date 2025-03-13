@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    stages {
+    stages 
         stage('Build') {
             steps {
                 sh 'g++ -o hello_exec main/hello.cpp'
