@@ -3,7 +3,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'g++ -o hello_exec main/hello.cpp'
+                // Intentional error: The file "nonexistent_file.cpp" does not exist
+                sh 'g++ -o hello_exec main/nonexistent_file.cpp'
             }
         }
         stage('Test') {
